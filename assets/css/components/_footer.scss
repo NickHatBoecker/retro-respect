@@ -2,8 +2,13 @@
     width: 100%;
     background-color: $card-background;
     padding: $spacing-unit*2;
-    position: fixed;
+    position: absolute;
     bottom: 0;
+
+    @media (max-width: 480px) {
+        position: static;
+        margin-top: $spacing-unit*4;
+    }
 
     & p {
         color: $card-text;

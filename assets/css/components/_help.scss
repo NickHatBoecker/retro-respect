@@ -1,0 +1,61 @@
+.c-help {
+    width: 100%;
+    padding: $spacing-unit*2;
+    margin-bottom: $spacing-unit*2;
+
+    label {
+        color: darken($card-background, 20%);
+    }
+
+    &__textarea-wrapper {
+        box-shadow: 0 0 $spacing-unit $card-outer-shadow;
+        border-radius: $card-border-radius/2;
+        margin: $spacing-unit*1 0 $spacing-unit*2;
+    }
+
+    textarea {
+        width: 100%;
+        display: block;
+        background-color: $card-background;
+        border-radius: $card-border-radius/2;
+        box-shadow: inset 0 0 $spacing-unit $card-inner-shadow;
+        border: $spacing-unit*2 solid $card-inner-border;
+        padding: $spacing-unit*2;
+        font-family: $default-font-family;
+        font-size: $card-font-size;
+        line-height: $card-line-height;
+        color: $card-text;
+        text-shadow: 1px 1px 1px $card-text-shadow;
+    }
+
+    select {
+        font-size: .9rem;
+        font-family: $default-font-family;
+        height: $spacing-unit*4;
+        position: relative;
+        top: -2px;
+    }
+
+    input {
+        width: 50%;
+        background-color: $card-background;
+        border-radius: $card-border-radius/2;
+        box-shadow: inset 0 0 $spacing-unit $card-inner-shadow;
+        border: $spacing-unit solid $card-inner-border;
+        padding: $spacing-unit;
+        font-family: $default-font-family;
+        font-size: $card-font-size - .3;
+        line-height: $card-line-height;
+        color: $card-text;
+        text-shadow: 1px 1px 1px $card-text-shadow;
+    }
+
+    &__form-group {
+        margin-bottom: $spacing-unit*4;
+    }
+
+    &__helptext {
+        font-size: .9rem;
+        color: darken($card-background, 10%);
+    }
+}

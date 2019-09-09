@@ -1,9 +1,14 @@
 $default-font-family: '04b03regular', Arial, no-serif;
 $default-theme: 'pink';
 
+$help-text: #333;
+
 $spacing-unit: 6px;
 $card-width: 30em;
 $card-text-align: center;
+$card-border-radius: $spacing-unit*4;
+$card-font-size: 1.3rem;
+$card-line-height: 1.7rem;
 
 $card-background: #faafb8 !default;
 $card-text: #fff !default;
