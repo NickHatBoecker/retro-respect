@@ -1,0 +1,49 @@
+$theme: 'pink';
+
+@mixin theme($theme: $theme) {
+    @if $theme == 'blue' {
+        $card-background: #afdefa !global;
+        $card-text: #fff !global;
+
+        $card-inner-border: lighten($card-background, 13%) !global;
+        $card-inner-shadow: darken(adjust-color($card-background, $red: -30), 10%) !global;
+        $card-outer-shadow: lighten($card-background, 3%) !global;
+        $card-text-shadow: darken($card-text, 60%) !global;
+    } @else if $theme == 'red' {
+        $card-background: #ff6060 !global;
+        $card-text: #fff !global;
+
+        $card-inner-border: lighten($card-background, 13%) !global;
+        $card-inner-shadow: darken(adjust-color($card-background, $red: -30), 10%) !global;
+        $card-outer-shadow: lighten($card-background, 3%) !global;
+        $card-text-shadow: darken($card-text, 60%) !global;
+    } @else if $theme == 'orange' {
+        $card-background: #ffb98f !global;
+        $card-text: #fff !global;
+
+        $card-inner-border: lighten($card-background, 13%) !global;
+        $card-inner-shadow: darken(adjust-color($card-background, $red: -30), 10%) !global;
+        $card-outer-shadow: lighten($card-background, 3%) !global;
+        $card-text-shadow: darken($card-text, 60%) !global;
+    } @else if $theme == 'green' {
+        $card-background: #66d273 !global;
+        $card-text: #fff !global;
+        $card-inner-border: lighten($card-background, 25%) !global;
+
+        $card-inner-shadow: darken(adjust-color($card-background, $red: -30), 10%) !global;
+        $card-outer-shadow: lighten($card-background, 3%) !global;
+        $card-text-shadow: darken($card-text, 60%) !global;
+    } @else {
+        // Default pink
+        $card-background: #faafb8 !global;
+        $card-text: #fff !global;
+
+        $card-inner-border: lighten($card-background, 13%) !global;
+        $card-inner-shadow: darken(adjust-color($card-background, $red: -30), 10%) !global;
+        $card-outer-shadow: lighten($card-background, 3%) !global;
+        $card-text-shadow: darken($card-text, 60%) !global;
+    }
+
+    //  passed content (classes)
+    @content;
+}

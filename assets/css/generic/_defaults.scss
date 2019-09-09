@@ -1,0 +1,13 @@
+html, body {
+    height: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: $default-font-family;
+}
+
+@include theme {
+    body {
+        background-color: lighten($card-background, 10%);
+    }
+}
