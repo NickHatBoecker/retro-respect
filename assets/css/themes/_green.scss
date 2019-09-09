@@ -1,3 +1,16 @@
-$card-background: #66d273;
-$card-text: #fff;
-$card-inner-border: lighten($card-background, 25%);
+body.green {
+    $card-background: #66d273;
+    $card-text: #fff;
+    $card-inner-border: lighten($card-background, 25%);
+
+    $card-inner-shadow: darken(adjust-color($card-background, $red: -30), 10%);
+    $card-outer-shadow: lighten($card-background, 3%);
+    $card-text-shadow: darken($card-text, 60%);
+
+    & {
+        background-color: lighten($card-background, 10%);
+    }
+
+    @import '../components/card';
+    @import '../components/footer';
+}

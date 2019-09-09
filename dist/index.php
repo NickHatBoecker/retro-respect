@@ -1,6 +1,9 @@
 <?php
 $text = $_GET['text'] ?? 'Tell your dog I said hi.';
 $theme = $_GET['color'] ?? 'pink';
+if (!$theme) {
+    $theme = 'pink';
+}
 
 $saveText = htmlentities($text, ENT_QUOTES, 'utf-8');
 $saveText = str_replace('\n', "<br>", $saveText);
@@ -13,7 +16,7 @@ $saveText = str_replace('\n', "<br>", $saveText);
     <meta charset="utf-8" />
     <title></title>
 
-    <link rel="stylesheet" type="text/css" href="build/app.css">
+    <link rel="stylesheet" type="text/css" href="app.css">
 </head>
 <body class="<?php echo htmlentities($theme, ENT_QUOTES, 'utf-8'); ?>">
     <div class="c-card__wrapper">
@@ -26,7 +29,7 @@ $saveText = str_replace('\n', "<br>", $saveText);
     </div>
     <div class="c-footer">
         <p>
-            Generated via Retro-Respect. Wanna generate your own? Visit <a href="https://retro-respect.nick-hat-boecker.de">https://retro-respect.nick-hat-boecker.de</a>.
+            Retro-Respect &copy; <a href="https://nick-hat-boecker.de">NickHatBoecker</a> || Wanna generate your own? Visit <a href="https://retro-respect.nick-hat-boecker.de">https://retro-respect.nick-hat-boecker.de</a>.
         </p>
     </div>
 </body>

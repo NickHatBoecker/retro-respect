@@ -6,8 +6,6 @@ html, body {
     font-family: $default-font-family;
 }
 
-@include theme {
-    body {
-        background-color: lighten($card-background, 10%);
-    }
+body {
+    background-color: lighten($card-background, 10%);
 }

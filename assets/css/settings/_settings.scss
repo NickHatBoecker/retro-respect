@@ -2,5 +2,13 @@ $default-font-family: '04b03regular', Arial, no-serif;
 $default-theme: 'pink';
 
 $spacing-unit: 6px;
-$card-width: 25%;
+$card-width: 30em;
 $card-text-align: center;
+
+$card-background: #faafb8 !default;
+$card-text: #fff !default;
+
+$card-inner-border: lighten($card-background, 13%) !default;
+$card-inner-shadow: darken(adjust-color($card-background, $red: -30), 10%) !default;
+$card-outer-shadow: lighten($card-background, 3%) !default;
+$card-text-shadow: darken($card-text, 60%) !default;

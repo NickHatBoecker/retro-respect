@@ -2,12 +2,13 @@
 
 @import "./fonts/fonts";
 
-@import "./mixins/theme";
+@import "./themes/blue";
+@import "./themes/green";
+@import "./themes/orange";
+@import "./themes/pink";
+@import "./themes/red";
 
 @import "./generic/normalize";
 @import "./generic/defaults";
-
-@import "./components/card";
-@import "./components/footer";
 
 @import "./utilities/utilities";

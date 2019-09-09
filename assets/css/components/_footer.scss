@@ -1,18 +1,16 @@
-@include theme {
-    .c-footer {
-        width: 100%;
-        background-color: $card-background;
-        padding: $spacing-unit*2;
-        position: fixed;
-        bottom: 0;
+.c-footer {
+    width: 100%;
+    background-color: $card-background;
+    padding: $spacing-unit*2;
+    position: fixed;
+    bottom: 0;
 
-        & p {
-            color: $card-text;
-            font-size: 1.1rem;
-            line-height: 1.7rem;
-            margin: 0;
-            padding: 0;
-            text-shadow: 1px 1px 1px $card-text-shadow;
-        }
+    & p {
+        color: $card-text;
+        font-size: 1.1rem;
+        line-height: 1.7rem;
+        margin: 0;
+        padding: 0;
+        text-shadow: 1px 1px 1px $card-text-shadow;
     }
 }

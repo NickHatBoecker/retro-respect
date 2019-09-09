@@ -3,7 +3,9 @@
         "node-sass": "^4.12.0"
     },
     "scripts": {
-        "scss": "node-sass --output-style compressed -wr -o build assets/css",
-        "dev": "npm run scss"
+        "scss": "node-sass --output-style compressed -o dist assets/css",
+        "watch-scss": "node-sass --output-style compressed -wr -o dist assets/css",
+        "dev": "npm run watch-scss",
+        "prod": "npm run scss"
     }
 }
