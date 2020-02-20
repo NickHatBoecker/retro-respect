@@ -2,4 +2,10 @@ node_modules/
 
 dist/*
 !/dist/index.php
+!/dist/helper.php
+!/dist/save_image.php
 !/dist/fonts
+!/dist/js/app.js
+!/dist/uploads/
+!/dist/js/
+/dist/uploads/*.jpg

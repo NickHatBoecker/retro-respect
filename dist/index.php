@@ -1,4 +1,6 @@
 <?php
+require_once 'helper.php';
+
 $text = $_GET['text'] ?? 'Tell your dog I said hi.';
 $theme = $_GET['color'] ?? 'pink';
 if (!$theme) {
@@ -18,9 +20,14 @@ $saveText = str_replace('\n', "<br>", $saveText);
     <meta charset="utf-8" />
     <title>Retro respect</title>
 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:title" content="<?php echo htmlentities($text, ENT_QUOTES, 'utf-8'); ?>" />
+    <meta property="og:description" content="Share some pixel messages with your loved ones." />
+    <meta property="og:image" content="<?php echo sprintf('https://%s%s', $_SERVER['HTTP_HOST'], generateUrl($text, $theme)); ?>" />
+
     <link rel="stylesheet" type="text/css" href="app.css">
 </head>
-<body class="<?php echo htmlentities($theme, ENT_QUOTES, 'utf-8'); ?>">
+<body id="capture" class="<?php echo htmlentities($theme, ENT_QUOTES, 'utf-8'); ?>">
     <?php
     if ($showHelp) {
         ?>
@@ -58,69 +65,15 @@ $saveText = str_replace('\n', "<br>", $saveText);
             </div>
         </div>
     </div>
-    <div class="c-footer">
+    <div class="c-footer" data-html2canvas-ignore>
         <p>
             Retro-Respect &copy; <a href="https://nick-hat-boecker.de">NickHatBoecker</a> || Wanna generate your own? Visit <a href="https://retro-respect.nick-hat-boecker.de">https://retro-respect.nick-hat-boecker.de</a>.
         </p>
     </div>
 
-    <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-    <script>
-        window.timeouts = [];
-        var $yourColor = $('#js-your_color');
-        var $yourText = $('#js-your_text');
-        var $yourUrl = $('#js-your_url');
-        var $updated = $('#js-updated');
-        var $currentText = $('#js-text');
-
-        $yourColor.change(function () {
-            var newTheme = $yourColor.val();
-            var $body = $('body');
-            $body.removeAttr('class');
-            $body.addClass(newTheme);
-
-            renderUrl();
-        });
-
-        $yourText.keyup(function () {
-            var newText = $yourText.val();
-            $currentText.text(newText); // Sanitize code
-            newText = $currentText.text().replace(/\\n/g, '<br>');
-            $currentText.html(newText);
-
-            renderUrl();
-        });
-
-        function renderUrl () {
-            resetTimeouts();
-            $updated.hide();
-            var url = getUrl();
-            $yourUrl.val(url);
-            $updated.fadeIn();
-
-            var timeout = setTimeout(function () { $updated.fadeOut() }, 2000);
-            window.timeouts.push(timeout);
-        }
-
-        function getUrl () {
-            var $baseUrl = 'https://retro-respect.nick-hat-boecker.de/?';
-            var data = {
-                color: $yourColor.val(),
-                text: $yourText.val(),
-            };
-
-            return $baseUrl + jQuery.param(data);
-        }
-
-        function resetTimeouts () {
-            for(i = 0; i < window.timeouts.length; i++) {
-                window.clearTimeout(window.timeouts[i]);
-            }
-        }
-    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/html2canvas.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
 

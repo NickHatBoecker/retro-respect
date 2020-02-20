@@ -1,0 +1,16 @@
+.canvas {
+    .c-card__wrapper {
+        width: auto !important;
+        max-width: 60% !important;
+    }
+
+    .c-card__content {
+        padding-top: $spacing-unit*12 !important;
+        padding-bottom: $spacing-unit*12 !important;
+    }
+
+    .c-card__text {
+        font-size: 4rem !important;
+        line-height: 5rem !important;
+    }
+}
