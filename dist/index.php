@@ -42,6 +42,7 @@ $saveText = str_replace('\n', "<br>", $saveText);
             <div class="c-help__form-group">
                 <label for="js-your_color">Choose color:</label>
                 <select id="js-your_color">
+                    <option value="black">Black</option>
                     <option value="blue">Blue</option>
                     <option value="green">Green</option>
                     <option value="orange">Orange</option>

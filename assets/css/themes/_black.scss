@@ -1,0 +1,22 @@
+body.black {
+    $card-background: #000;
+    $card-text: #fff;
+
+    $card-inner-border: darken($card-text, 15%);
+    $card-inner-shadow: darken(adjust-color($card-background, $red: -30), 10%);
+    $card-outer-shadow: lighten($card-background, 3%);
+    $card-text-shadow: darken($card-text, 60%);
+
+    & {
+        background-color: lighten($card-background, 10%);
+    }
+
+    @import '../components/card';
+    @import '../components/help';
+    @import '../components/footer';
+
+    .c-help label,
+    .c-help__helptext {
+        color: $card-text !important;
+    }
+}
