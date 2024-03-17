@@ -75,6 +75,7 @@ $saveText = str_replace('\n', "<br>", $saveText);
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/html2canvas.min.js"></script>
     <script src="js/app.js"></script>
+    <script defer data-domain="retro-respect.nick-hat-boecker.de" src="https://analytics.serverwueste.de/js/script.js"></script>
 </body>
 </html>
 
